@@ -25,7 +25,7 @@ router.post("/api/add", function(req, res) {
     {burgers:req.body.id}, req.body.burger_name
   ], function(result) {
    
-  return res.json({id:result.id}) && res.redirect("/") || console.log("burger burger")
+ res.json({id:result.id}) && res.redirect("/") || console.log("burger burger")
 
   });
 });

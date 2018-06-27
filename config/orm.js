@@ -11,7 +11,6 @@ connection.connect(function(err) {
 
 
 
-// Object for all our SQL statement functions.
 var orm = {
   selectAll: function(table, cb) {
     connection.query("SELECT * FROM " + table + ";",
@@ -37,7 +36,6 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table,  cb) {
   connection.query("UPDATE " + table +"SET? WHERE?",[{id:table.id},{devored:true}],
 
